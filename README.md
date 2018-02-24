@@ -4,3 +4,4 @@
 - Restore
 - Create DB and User
 - Switch Owner on DB Objects
+- Reset Sequences
