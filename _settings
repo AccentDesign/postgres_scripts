@@ -4,22 +4,22 @@ PG_BIN=/Applications/Postgres.app/Contents/Versions/9.6/bin
 export PATH="$PATH:${PG_BIN}"
 
 # used in the backup
-BACKUP_HOST=192.168.1.130
+BACKUP_HOST=1.2.3.4
 BACKUP_PORT=5432
 BACKUP_USER=postgres
 BACKUP_MAINTENANCE_DB=postgres
 
 # db to be backed up
-BACKUP_DB=db
+BACKUP_DB=mydb
 BACKUP_FILE=/tmp/db_backup.dump
 
 # used in restoring
-RESTORE_HOST=localhost
+RESTORE_HOST=9.8.7.6
 RESTORE_PORT=5432
 RESTORE_USER=postgres
 RESTORE_MAINTENANCE_DB=postgres
 
 # db and user in restoring
-RESTORE_CREATE_DB=db
-RESTORE_CREATE_USER=db_user
-RESTORE_CREATE_USER_PASSWORD=password
+RESTORE_CREATE_DB=mydb_new
+RESTORE_CREATE_USER=mydb_user
+RESTORE_CREATE_USER_PASSWORD=mydb_password
