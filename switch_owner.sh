@@ -15,3 +15,5 @@ for tbl in `psql -qAt -h $RESTORE_HOST -p $RESTORE_PORT -U $RESTORE_USER -c "sel
 do  
     psql -h $RESTORE_HOST -p $RESTORE_PORT -U $RESTORE_USER -c "alter table \"$tbl\" owner to ${RESTORE_CREATE_USER}" ${RESTORE_CREATE_DB} ;
 done
+
+psql -h $RESTORE_HOST -p $RESTORE_PORT -U $RESTORE_USER -c "ALTER SCHEMA public owner to ${RESTORE_CREATE_USER}" ${RESTORE_CREATE_DB} ;
